@@ -1,0 +1,7 @@
+.header {
+  background-color: rgb(74, 74, 125);
+  width: fit-content;
+  padding: 10px 20px;
+  display: flex;
+  margin: 5px;
+}

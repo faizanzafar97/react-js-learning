@@ -5,67 +5,229 @@
 }
 
 body {
-  min-height: 100vh;
-  background: #111;
-  color: white;
   font-family: Arial, Helvetica, sans-serif;
+  background: #0b0b0b;
 }
 
+/* Main container */
 .parent {
   min-height: 100vh;
+  width: 100%;
+  padding: 30px 20px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
+/* Card */
 .card {
-  width: 350px;
-  min-height: 400px;
-  background: #1e1e1e;
-  border-radius: 15px;
-  padding: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 280px;
+  min-height: 320px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 18px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+/* Top section */
 .top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
+/* Company image */
 .top img {
-  width: 55px;
-  height: 55px;
-  object-fit: cover;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
+  object-fit: contain;
+  border: 1px solid #eee;
+  padding: 5px;
+  background: white;
 }
 
+/* Save button */
 .top button {
+  border: none;
+  background: #ffffff;
+  color: #999;
+  font-size: 9px;
+  font-weight: 500;
+
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 8px;
-  background: #333;
-  color: white;
+  gap: 4px;
+
+  padding: 5px 7px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.top button:hover {
-  background: #444;
-}
-
-.top button svg {
-  width: 18px;
-  height: 18px;
-}
-
+/* Center section */
 .center {
-  min-height: 250px;
+  padding: 30px 5px;
+  margin-top: 10px;
 }
 
+.center h3 {
+  font-size: 12px;
+  color: #222;
+  font-weight: 600;
+}
+
+.center h3 span {
+  color: #aaa;
+  font-size: 9px;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+.center h2 {
+  margin-top: 6px;
+  font-size: 17px;
+  color: #222;
+  font-weight: 700;
+}
+
+/* Tags */
+.tag {
+  display: flex;
+  gap: 6px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.tag p {
+  background: #f1f1f1;
+  color: #555;
+  font-size: 9px;
+  font-weight: 500;
+  padding: 5px 7px;
+  border-radius: 4px;
+}
+
+/* Bottom section */
 .bottom {
-  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+
+  margin-top: auto;
+  padding-top: 35px;
+}
+
+.bottom h3 {
+  font-size: 15px;
+  color: #222;
+  font-weight: 700;
+}
+
+.bottom p {
+  margin-top: 3px;
+  color: #999;
+  font-size: 9px;
+}
+
+/* Apply button */
+.bottom button {
+  border: none;
+  background: #222;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+
+  padding: 9px 13px;
+  border-radius: 7px;
+
+  cursor: pointer;
+}
+
+.bottom button:hover {
+  background: #000;
+}
+
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .parent {
+    padding: 25px 15px;
+    gap: 15px;
+  }
+
+  .card {
+    width: 260px;
+    min-height: 310px;
+  }
+
+}
+
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+  .parent {
+    padding: 20px 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 360px;
+    min-height: 310px;
+  }
+
+}
+
+
+/* ========================= */
+/* SMALL MOBILE */
+/* ========================= */
+
+@media (max-width: 400px) {
+
+  .parent {
+    padding: 15px 10px;
+  }
+
+  .card {
+    width: 100%;
+    min-height: 300px;
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .center {
+    padding: 25px 3px;
+  }
+
+  .center h2 {
+    font-size: 16px;
+  }
+
+  .bottom {
+    padding-top: 25px;
+  }
+
+  .bottom button {
+    padding: 8px 11px;
+  }
+
 }

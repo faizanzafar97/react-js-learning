@@ -1,3 +1,7 @@
+/* =========================
+   RESET
+========================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,208 +13,303 @@ body {
   background: #0b0b0b;
 }
 
-/* Main container */
-.parent {
-  min-height: 100vh;
-  width: 100%;
-  padding: 30px 20px;
 
-  display: flex;
+/* =========================
+   JOBS CONTAINER
+========================= */
+
+.jobs-container {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 40px 24px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 280px));
   justify-content: center;
-  align-items: center;
+  align-content: center;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
-/* Card */
+
+/* =========================
+   CARD
+========================= */
+
 .card {
-  width: 280px;
+  width: 100%;
   min-height: 320px;
-  background: #ffffff;
-  border-radius: 22px;
+
   padding: 18px;
 
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+  background: #fff;
+  border-radius: 22px;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-/* Top section */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   TOP
+========================= */
+
 .top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-/* Company image */
 .top img {
   width: 42px;
   height: 42px;
-  border-radius: 50%;
-  object-fit: contain;
-  border: 1px solid #eee;
+
   padding: 5px;
-  background: white;
+
+  object-fit: contain;
+
+  border: 1px solid #eee;
+  border-radius: 50%;
+
+  background: #fff;
 }
 
+
 /* Save button */
-.top button {
+
+.save-btn {
   border: none;
-  background: #ffffff;
-  color: #999;
-  font-size: 9px;
-  font-weight: 500;
+  border-radius: 6px;
+
+  padding: 6px 8px;
 
   display: flex;
   align-items: center;
   gap: 4px;
 
-  padding: 5px 7px;
-  border-radius: 5px;
+  background: #fff;
+  color: #999;
+
+  font-size: 9px;
+  font-weight: 500;
+
   cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
-/* Center section */
+.save-btn:hover {
+  background: #f3f3f3;
+  color: #222;
+}
+
+
+/* =========================
+   CENTER
+========================= */
+
 .center {
-  padding: 30px 5px;
   margin-top: 10px;
+  padding: 30px 5px;
 }
 
 .center h3 {
-  font-size: 12px;
   color: #222;
+  font-size: 12px;
   font-weight: 600;
 }
 
 .center h3 span {
+  margin-left: 5px;
+
   color: #aaa;
+
   font-size: 9px;
   font-weight: 400;
-  margin-left: 5px;
 }
 
 .center h2 {
   margin-top: 6px;
-  font-size: 17px;
+
   color: #222;
+
+  font-size: 17px;
+  line-height: 1.3;
   font-weight: 700;
 }
 
-/* Tags */
-.tag {
+
+/* =========================
+   TAGS
+========================= */
+
+.tags {
   display: flex;
-  gap: 6px;
-  margin-top: 12px;
   flex-wrap: wrap;
+  gap: 6px;
+
+  margin-top: 12px;
 }
 
-.tag p {
+.tags p {
+  padding: 5px 7px;
+
+  border-radius: 4px;
+
   background: #f1f1f1;
   color: #555;
+
   font-size: 9px;
   font-weight: 500;
-  padding: 5px 7px;
-  border-radius: 4px;
 }
 
-/* Bottom section */
+
+/* =========================
+   BOTTOM
+========================= */
+
 .bottom {
+  margin-top: auto;
+  padding-top: 30px;
+
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 10px;
 
-  margin-top: auto;
-  padding-top: 35px;
+  gap: 10px;
+}
+
+.job-info {
+  min-width: 0;
 }
 
 .bottom h3 {
-  font-size: 15px;
   color: #222;
+
+  font-size: 15px;
   font-weight: 700;
 }
 
 .bottom p {
   margin-top: 3px;
+
   color: #999;
+
   font-size: 9px;
+  line-height: 1.4;
 }
 
-/* Apply button */
-.bottom button {
+
+/* =========================
+   APPLY BUTTON
+========================= */
+
+.apply-btn {
+  flex-shrink: 0;
+
   border: none;
+  border-radius: 7px;
+
+  padding: 9px 13px;
+
   background: #222;
-  color: white;
+  color: #fff;
+
   font-size: 10px;
   font-weight: 600;
 
-  padding: 9px 13px;
-  border-radius: 7px;
-
   cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
-.bottom button:hover {
+.apply-btn:hover {
   background: #000;
 }
 
-
-/* ========================= */
-/* TABLET */
-/* ========================= */
-
-@media (max-width: 768px) {
-
-  .parent {
-    padding: 25px 15px;
-    gap: 15px;
-  }
-
-  .card {
-    width: 260px;
-    min-height: 310px;
-  }
-
+.apply-btn:active {
+  transform: scale(0.97);
 }
 
 
-/* ========================= */
-/* MOBILE */
-/* ========================= */
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .jobs-container {
+    padding: 30px 18px;
+
+    grid-template-columns:
+      repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 16px;
+  }
+
+  .card {
+    min-height: 310px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 600px) {
 
-  .parent {
+  .jobs-container {
     padding: 20px 15px;
-    flex-direction: column;
-    align-items: center;
+
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    align-content: start;
   }
 
   .card {
     width: 100%;
-    max-width: 360px;
-    min-height: 310px;
-  }
+    max-width: 400px;
 
+    min-height: 300px;
+
+    margin: 0 auto;
+  }
 }
 
 
-/* ========================= */
-/* SMALL MOBILE */
-/* ========================= */
+/* =========================
+   SMALL MOBILE
+========================= */
 
 @media (max-width: 400px) {
 
-  .parent {
+  .jobs-container {
     padding: 15px 10px;
   }
 
   .card {
-    width: 100%;
-    min-height: 300px;
+    min-height: 290px;
+
     padding: 16px;
+
     border-radius: 18px;
   }
 
@@ -226,8 +325,8 @@ body {
     padding-top: 25px;
   }
 
-  .bottom button {
-    padding: 8px 11px;
+  .apply-btn {
+    padding: 8px 10px;
+    font-size: 9px;
   }
-
 }

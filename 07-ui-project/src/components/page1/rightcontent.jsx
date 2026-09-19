@@ -1,12 +1,14 @@
-import React from "react";
 
-const RightContent = () => {
+import React from "react";
+import RightCard from "./rightcard.jsx";
+
+const RightContent = (props) => {
   return (
-    <div className="h-full w-2/3 bg-blue-300 p-6">
-      <h3 className="text-xl font-bold text-black">Right Content</h3>
-      <p className="text-lg text-gray-500">This is the right content area.</p>
+    <div className="flex w-full items-center justify-center rounded-3xl bg-[#d9ff00] p-4 md:p-6 lg:w-2/3">
+      <RightCard cards={props.cards} />
     </div>
   );
 };
 
 export default RightContent;
+

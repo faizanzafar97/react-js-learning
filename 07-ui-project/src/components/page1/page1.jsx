@@ -1,14 +1,16 @@
-import React from 'react'
-import Navbar from './navbar.jsx'
-import Content from './content.jsx'
 
-const Page1 = () => {
+import React from "react";
+import Navbar from "./navbar.jsx";
+import Content from "./content.jsx";
+
+const Page1 = (props) => {
   return (
-    <div className='bg-gray-700 h-full w-full text-white p-4'>
+    <section className="min-h-screen w-full bg-[#f5f5f3] px-4 py-4 text-black">
       <Navbar />
-      <Content />
-    </div>
-  )
-}
+      <Content cards={props.cards} />
+    </section>
+  );
+};
 
-export default Page1
+export default Page1;
+

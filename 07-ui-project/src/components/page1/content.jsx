@@ -1,14 +1,16 @@
+
 import React from "react";
 import LeftContent from "./leftcontent.jsx";
 import RightContent from "./rightcontent.jsx";
 
-const Content = () => {
+const Content = (props) => {
   return (
-    <div className="py-10 flex items-center gap-4 h-[90vh] bg-amber-100 ">
+    <div className="flex min-h-[calc(100vh-100px)] flex-col gap-4 py-6 lg:flex-row lg:py-8">
       <LeftContent />
-      <RightContent />
+      <RightContent cards={props.cards} />
     </div>
   );
 };
 
 export default Content;
+

@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #111;
+  color: white;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.container > h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #aaa;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: #222;
+  padding: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #2c2c2c;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.card h3 {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.buttons button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  color: #111;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons button:hover {
+  background: #ddd;
+  transform: translateY(-2px);
+}
+
+.buttons button:active {
+  transform: scale(0.95);
+}
+
+.buttons button:disabled {
+  background: #555;
+  color: #999;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.loading {
+  text-align: center;
+  font-size: 25px;
+  margin: 40px 0;
+}
+
+.error {
+  text-align: center;
+  color: #ff5555;
+  margin: 40px 0;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .container {
+    width: 92%;
+    padding: 25px 0;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card img {
+    height: 300px;
+  }
+
+  .buttons button {
+    padding: 12px 25px;
+  }
+
+}

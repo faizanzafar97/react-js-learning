@@ -3,28 +3,28 @@ import "./App.css";
 
 const App = () => {
   const [count, setCount] = useState(0);
+  const [name, setName] = useState("Faizan");
 
-  // useEffect runs when the component loads
-  // and whenever count changes
   useEffect(() => {
-    document.title = `Count: ${count}`;
-
     console.log("useEffect is running");
-  }, [count]);
+    console.log("Count:", count);
+    console.log("Name:", name);
+  }, [count, name]);
 
   return (
     <div className="container">
       <div className="card">
-        <h1>useEffect Hook</h1>
+        <h1>useEffect</h1>
 
-        <p className="count">{count}</p>
+        <h2>Count: {count}</h2>
+        <h2>Name: {name}</h2>
 
         <button onClick={() => setCount(count + 1)}>
-          Increment
+          Increase Count
         </button>
 
-        <button onClick={() => setCount(count - 1)}>
-          Decrement
+        <button onClick={() => setName(name === "Faizan" ? "Ali" : "Faizan")}>
+          Change Name
         </button>
       </div>
     </div>

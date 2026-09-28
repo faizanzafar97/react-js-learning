@@ -1,16 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 const Services = () => {
+
   return (
-    <section id="services" className="section-darker">
+    <section className="section-darker">
 
       <div className="container">
 
         <div className="section-title">
 
-          <span>Services</span>
+          <span>SERVICES</span>
 
-          <h2>What We Build</h2>
+          <h2>
+            What We Build
+          </h2>
 
           <p>
             Modern solutions for modern websites.
@@ -21,67 +26,81 @@ const Services = () => {
 
         <div className="cards">
 
-          {/* Service 1 */}
+
           <div className="service-card">
 
             <div className="service-number">
-              1
+              01
             </div>
 
-            <h3>React Applications</h3>
+            <h3>
+              React Applications
+            </h3>
 
             <p>
-              Build scalable and interactive React applications
-              using modern development practices.
+              Build scalable and interactive
+              React applications.
             </p>
 
-            <button className="learn-more">
+            <Link
+              to="/contact"
+              className="learn-more"
+            >
               Learn More →
-            </button>
+            </Link>
 
           </div>
 
 
-          {/* Service 2 */}
           <div className="service-card">
 
             <div className="service-number">
-              2
+              02
             </div>
 
-            <h3>Modern UI</h3>
+            <h3>
+              Modern UI
+            </h3>
 
             <p>
-              Create modern, clean and beautiful user
-              interfaces with React and CSS.
+              Create modern and beautiful
+              user interfaces.
             </p>
 
-            <button className="learn-more">
+            <Link
+              to="/contact"
+              className="learn-more"
+            >
               Learn More →
-            </button>
+            </Link>
 
           </div>
 
 
-          {/* Service 3 */}
           <div className="service-card">
 
             <div className="service-number">
-              3
+              03
             </div>
 
-            <h3>Responsive Websites</h3>
+            <h3>
+              Responsive Websites
+            </h3>
 
             <p>
-              Make websites that work properly on mobile,
-              tablet and desktop screens.
+              Make websites that work perfectly
+              on every screen.
             </p>
 
-            <button className="learn-more">
+            <Link
+              to="/contact"
+              className="learn-more"
+            >
               Learn More →
-            </button>
+            </Link>
 
           </div>
+
 
         </div>
 
@@ -90,7 +109,5 @@ const Services = () => {
     </section>
   )
 }
-
-
 
 export default Services

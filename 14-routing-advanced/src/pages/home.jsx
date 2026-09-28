@@ -1,21 +1,18 @@
-// ============================================================
-// 1. src/pages/Home.jsx
-// ============================================================
-
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 const Home = () => {
+
   return (
-    <section id="home" className="hero">
+    <section className="hero">
 
       <div className="hero-container">
 
-        {/* Left Content */}
-
         <div className="hero-content">
 
-          <span>
-            Modern Web Development
+          <span className="hero-label">
+            MODERN WEB DEVELOPMENT
           </span>
 
           <h1>
@@ -29,48 +26,61 @@ const Home = () => {
             websites using React and CSS.
           </p>
 
+
           <div className="hero-buttons">
 
-            <button className="primary-btn">
-              Start Project
-            </button>
+            <Link
+              to="/products"
+              className="primary-btn"
+            >
+              Explore Products
+            </Link>
 
-            <button className="secondary-btn">
-              Learn More
-            </button>
+            <Link
+              to="/services"
+              className="secondary-btn"
+            >
+              Our Services
+            </Link>
 
           </div>
 
         </div>
 
 
-        {/* Right Content */}
-
         <div className="hero-card">
 
-          <div className="browser-dots">
+          <div className="browser-top">
 
-            <span className="red"></span>
-            <span className="yellow"></span>
-            <span className="green"></span>
+            <div className="browser-dots">
+
+              <span className="dot red"></span>
+              <span className="dot yellow"></span>
+              <span className="dot green"></span>
+
+            </div>
+
+            <span className="browser-title">
+              devspace.jsx
+            </span>
 
           </div>
 
+
           <div className="code-box">
 
-            <div className="line blue"></div>
+            <div className="code-line long"></div>
 
-            <div className="line full"></div>
+            <div className="code-line medium"></div>
 
-            <div className="line small"></div>
+            <div className="code-line short"></div>
 
-            <div className="big-box"></div>
+            <div className="code-large-box"></div>
 
-            <div className="small-boxes">
+            <div className="code-small-row">
 
-              <div className="small-box"></div>
-
-              <div className="small-box"></div>
+              <div></div>
+              <div></div>
 
             </div>
 

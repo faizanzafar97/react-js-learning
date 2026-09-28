@@ -1,7 +1,3 @@
-// ============================================================
-// src/App.jsx
-// ============================================================
-
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
@@ -12,6 +8,14 @@ import Home from './pages/home'
 import About from './pages/about'
 import Services from './pages/services'
 import Contact from './pages/contact'
+
+import Products from './pages/products'
+import Women from './pages/women'
+import Men from './pages/men'
+
+import Courses from './pages/courses'
+import Coursesdetails from './pages/coursedetails'
+
 import PageNotFound from './pages/pagenotfound'
 
 import './App.css'
@@ -19,43 +23,94 @@ import './App.css'
 
 const App = () => {
   return (
-    <div>
+    <div className="app">
 
       <Navbar />
 
-      <Routes>
+      <main>
 
-        {/* HOME */}
-        <Route
-          path="/"
-          element={<Home />}
-        />
+        <Routes>
 
-        {/* ABOUT */}
-        <Route
-          path="/about"
-          element={<About />}
-        />
+          {/* HOME */}
+          <Route
+            path="/"
+            element={<Home />}
+          />
 
-        {/* SERVICES */}
-        <Route
-          path="/services"
-          element={<Services />}
-        />
+          {/* ABOUT */}
+          <Route
+            path="/about"
+            element={<About />}
+          />
 
-        {/* CONTACT */}
-        <Route
-          path="/contact"
-          element={<Contact />}
-        />
+          {/* SERVICES */}
+          <Route
+            path="/services"
+            element={<Services />}
+          />
 
-        {/* 404 */}
-        <Route
-          path="*"
-          element={<PageNotFound />}
-        />
+          {/* CONTACT */}
+          <Route
+            path="/contact"
+            element={<Contact />}
+          />
 
-      </Routes>
+          {/* =========================================
+              PRODUCTS = PARENT ROUTE
+              
+              URL:
+              /products
+          ========================================= */}
+
+          <Route
+            path="/products"
+            element={<Products />}
+          >
+
+            {/* =========================================
+                WOMEN = NESTED ROUTE
+
+                URL:
+                /products/women
+            ========================================= */}
+
+            <Route
+              path="women"
+              element={<Women />}
+            />
+
+            {/* =========================================
+                MEN = NESTED ROUTE
+
+                URL:
+                /products/men
+            ========================================= */}
+
+            <Route
+              path="men"
+              element={<Men />}
+            />
+
+          </Route>
+
+          <Route path='courses'
+          element={<Courses/>}
+          />
+
+          <Route path='coursedetails'
+          element={<Coursesdetails/>}
+          />
+
+          {/* 404 PAGE */}
+
+          <Route
+            path="*"
+            element={<PageNotFound />}
+          />
+
+        </Routes>
+
+      </main>
 
       <Footer />
 

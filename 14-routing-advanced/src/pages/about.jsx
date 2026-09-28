@@ -1,20 +1,16 @@
-// ============================================================
-// 2. src/pages/About.jsx
-// ============================================================
-
 import React from 'react'
 
+
 const About = () => {
+
   return (
-    <section id="about" className="section-dark">
+    <section className="section-dark">
 
       <div className="container">
 
-        {/* Section Heading */}
-
         <div className="section-title">
 
-          <span>About Us</span>
+          <span>ABOUT US</span>
 
           <h2>
             Everything You Need
@@ -28,11 +24,7 @@ const About = () => {
         </div>
 
 
-        {/* About Cards */}
-
         <div className="cards">
-
-          {/* Card 1 */}
 
           <div className="card">
 
@@ -52,8 +44,6 @@ const About = () => {
           </div>
 
 
-          {/* Card 2 */}
-
           <div className="card">
 
             <div className="card-icon">
@@ -71,8 +61,6 @@ const About = () => {
 
           </div>
 
-
-          {/* Card 3 */}
 
           <div className="card">
 

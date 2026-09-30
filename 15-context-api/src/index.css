@@ -1,0 +1,18 @@
+html,
+body{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+.nav1{
+  display: flex;
+  background-color: aquamarine;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5px 24px;
+}
+
+.nav2{
+  display: flex;
+  gap: 30px;
+}

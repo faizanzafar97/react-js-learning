@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Nav2 from "./nav2";
 
+
 const navbar = () => {
+
+    
+
   return (
     <div className='nav1'>
       <h1>Context API</h1>
